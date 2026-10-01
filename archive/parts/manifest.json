@@ -1,0 +1,61 @@
+{
+  "size": 86948508,
+  "sha256": "dde4c3954d46dddba6b9bacb2c115e2a2627e39f47d672127e3e875d529f6cf3",
+  "parts": [
+    {
+      "path": "archive/parts/original-submission.zip.part01",
+      "size": 8388608,
+      "sha256": "d10909ae07c0dc7644a63641eb18d052046230f1e5129f3ca64f2a340f5abbae"
+    },
+    {
+      "path": "archive/parts/original-submission.zip.part02",
+      "size": 8388608,
+      "sha256": "0b615987d35e2354ecfa23cd9f672350557f649c007137eb7e04643487bca4c5"
+    },
+    {
+      "path": "archive/parts/original-submission.zip.part03",
+      "size": 8388608,
+      "sha256": "3239a01869f397595078c19700b069d18d2d7840733ce45dc41b20adcf707240"
+    },
+    {
+      "path": "archive/parts/original-submission.zip.part04",
+      "size": 8388608,
+      "sha256": "7d8b7c6b43cf4f0fcd58527140d708d9cfa182883c18be2b596775eb83e0a3f4"
+    },
+    {
+      "path": "archive/parts/original-submission.zip.part05",
+      "size": 8388608,
+      "sha256": "9be09ca259694bc1ddb6df5fd1b086a28484d01fd558ef394f582dcd1e5dc4d9"
+    },
+    {
+      "path": "archive/parts/original-submission.zip.part06",
+      "size": 8388608,
+      "sha256": "1c549f6e10df15fcd857ed9eacd7f929e473ea65a9e05e68f9fe080707f8fc29"
+    },
+    {
+      "path": "archive/parts/original-submission.zip.part07",
+      "size": 8388608,
+      "sha256": "40f847b24fb7efac7ec8fa443923df3b0734b75e5ffcd10dc2a4804e3d30b501"
+    },
+    {
+      "path": "archive/parts/original-submission.zip.part08",
+      "size": 8388608,
+      "sha256": "d08b8a0e7f2f6ae8b3ec75c204353395f6f661168f3080426c2337d8d99f37db"
+    },
+    {
+      "path": "archive/parts/original-submission.zip.part09",
+      "size": 8388608,
+      "sha256": "6de71b0555c9c05fd639e247cb6e6273b76715643a6feb8d405b1ac8b569b69e"
+    },
+    {
+      "path": "archive/parts/original-submission.zip.part10",
+      "size": 8388608,
+      "sha256": "a94fb4920a2e4152db09e7ad95f463b37eb4d350e680f618c00f6541d7de180f"
+    },
+    {
+      "path": "archive/parts/original-submission.zip.part11",
+      "size": 3062428,
+      "sha256": "b5791e04b8f42f3f96160fbff2c5fb4f05fe89a85c72eea12499ebad105fe9a5"
+    }
+  ]
+}
