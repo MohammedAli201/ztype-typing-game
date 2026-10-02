@@ -4,3 +4,14 @@
 @media(max-width:720px){.shell{padding:0 16px}.topbar{height:76px}.intro{padding:30px 0}.intro h1{letter-spacing:-2px}.session-label{display:none}.subtitle{font-size:12px;line-height:1.7}.workspace{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr;gap:12px}.setup{grid-row:span 2}.tip{align-self:start;padding:0}.stats>div{padding:0 14px}.arena{height:340px}.target{padding:6px;font-size:11px;letter-spacing:0}.target.focus-target{font-size:26px}.game-footer{font-size:9px}.page-footer{flex-direction:column;font-size:9px}.history-heading h2{font-size:20px}}
 @media(max-width:420px){.sidebar{grid-template-columns:1fr}.setup{grid-row:auto}.tip{display:none}.stats>div{padding:0 9px}.stats>div>span{font-size:8px}.stats strong{font-size:23px}.overlay h2{font-size:25px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Projectile rendering uses the same world coordinates as the engine. */
+#combat { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; overflow: visible; }
+.laser { stroke: #d4ffe5; stroke-width: 3; stroke-linecap: round; filter: drop-shadow(0 0 4px #83f2b4); }
+.impact { fill: none; stroke: #b7f5cb; stroke-width: 2; }
+.destruction { stroke: #c6b4ff; stroke-width: 3; }
+.spark { fill: #c6b4ff; }
+.target { z-index: 2; }
+.target.secured { border-color: #b9aaff; background: #302647; }
+.ship { top: 92%; bottom: auto; width: 32px; height: 38px; z-index: 2; transform-origin: center; }
+.ship svg { width: 100%; height: 100%; display: block; filter: drop-shadow(0 0 8px #b7f5cb55); }

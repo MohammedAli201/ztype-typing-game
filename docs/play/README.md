@@ -23,6 +23,10 @@ Open http://localhost:8080 in a modern browser. ES modules require HTTP; opening
 - A mistake counts against accuracy but does not advance the target. Spaces, punctuation, modifiers, and backspace are ignored. Pasting and dropping text into the typing field are blocked.
 - Optional synthesized sound starts off. Standard buttons and settings support keyboard navigation. The input supports touch keyboards, though a physical keyboard is recommended for Orbit.
 
+## Shooting and motion
+
+Each correct letter fires a visible homing shot from the ship to its word. The ship turns toward the target; impacts produce rings and sparks. Completed words stay visible until their final impact. [Read the vector mathematics and collision rules](PHYSICS.md).
+
 ## Results and privacy
 
 WPM = correct letters / 5 / active minutes, including correctly typed partial words. Accuracy = correct letters / attempted letters. Scores award 10 points per correct letter and 50 per cleared word. Speed from a short session is noisy, so personal bests only compare completed 60-second sessions with the same collection and style.

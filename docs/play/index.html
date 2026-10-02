@@ -5,7 +5,7 @@
   <meta name="theme-color" content="#0b111b">
   <meta name="description" content="Build typing speed with a one-minute space challenge. Practice English, Norwegian, or coding words. No account needed.">
   <title>ZType — Find your flow</title>
-  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=0.2.0">
 </head>
 <body>
   <div class="shell">
@@ -21,7 +21,7 @@
             <div id="overlay" class="overlay">
               <div class="launch-icon" aria-hidden="true">⌁</div><p class="eyebrow">SMALL SESSIONS. REAL PROGRESS.</p><h2 id="overlay-title">Ready for takeoff?</h2><p id="overlay-copy">Type a word’s first letter to lock on.<br>Finish the word before it reaches your ship.</p><button id="start" class="primary">Start session <span aria-hidden="true">↗</span></button><span class="hint">60 seconds · 5 shields · your own pace</span>
             </div>
-            <div class="ship" aria-hidden="true">▲</div><div class="boundary"></div>
+            <svg id="combat" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden="true"></svg><div class="ship" aria-hidden="true"><svg viewBox="0 0 40 48"><path d="M20 2 36 40 20 33 4 40Z" fill="#b7f5cb"/><path d="M20 12 25 29H15Z" fill="#16362b"/><path d="m16 38 4 9 4-9" fill="#b9aaff"/></svg></div><div class="boundary"></div>
           </div>
           <div class="input-row"><label class="sr-only" for="typing">Type target letters here</label><input id="typing" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Start a session to type…" disabled aria-describedby="typing-help"><button id="pause" class="quiet" disabled>Pause</button><button id="restart" class="quiet" disabled title="Start a fresh session; the current attempt is not saved">Restart</button></div>
           <div class="game-footer"><span id="typing-help">Wrong key? Keep going. Only the next correct letter counts.</span><span><kbd>Esc</kbd> pause</span></div>
@@ -39,6 +39,6 @@
   </div>
   <dialog id="results"><form method="dialog"><p class="eyebrow">SESSION COMPLETE</p><h2 id="result-title">Nice flying.</h2><p id="result-copy"></p><div class="result-grid"><div><strong id="result-wpm"></strong><span>WPM</span></div><div><strong id="result-accuracy"></strong><span>ACCURACY</span></div><div><strong id="result-cleared"></strong><span>WORDS CLEARED</span></div></div><p id="result-detail"></p><button class="primary" value="again">Fly again ↗</button><button class="quiet" value="close">Back to dashboard</button></form></dialog>
   <dialog id="clear-dialog"><form method="dialog"><h2>Clear your progress?</h2><p>This removes the sessions saved in this browser.</p><button class="primary" value="cancel">Keep my progress</button><button class="quiet" value="clear">Clear history</button></form></dialog>
-  <noscript><p>This typing game needs JavaScript enabled.</p></noscript><script type="module" src="app.mjs?v=0.1.1"></script>
+  <noscript><p>This typing game needs JavaScript enabled.</p></noscript><script type="module" src="app.mjs?v=0.2.0"></script>
 </body>
 </html>
