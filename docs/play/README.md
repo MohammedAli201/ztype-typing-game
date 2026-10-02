@@ -2,6 +2,8 @@
 
 A new, dependency-free browser implementation of the typing-shooter concept. This is an early product prototype, not a port of the original C++ engine. Original source, academic report, archive, and author credits remain intact in the parent repository. The browser UI uses CSS, system fonts, and synthesized audio; no original third-party images or sound files are reused.
 
+[Play the live browser MVP](https://mohammedali201.github.io/ztype-typing-game/play/)
+
 ## Run
 
 From the repository root:
@@ -17,7 +19,7 @@ Open http://localhost:8080 in a modern browser. ES modules require HTTP; opening
 - Choose English, Norwegian, or code vocabulary. Code mode practices words, not syntax or punctuation.
 - **Orbit:** type the first letter of a visible word to lock onto it, then finish it. Five missed targets end the session; speed increases every 15 seconds.
 - **Focus:** one stationary word at a time, without shield losses. This is the default for people requesting reduced motion. Target words are announced to assistive technology in this mode.
-- Every session lasts up to 60 active seconds. Escape or the Pause button pauses/resumes. Switching tabs or windows automatically pauses; resuming is explicit.
+- Every session lasts up to 60 active seconds. Escape or the Pause button pauses/resumes. Restart begins a fresh attempt without saving the unfinished session. Switching tabs or windows automatically pauses; resuming is explicit.
 - A mistake counts against accuracy but does not advance the target. Spaces, punctuation, modifiers, and backspace are ignored. Pasting and dropping text into the typing field are blocked.
 - Optional synthesized sound starts off. Standard buttons and settings support keyboard navigation. The input supports touch keyboards, though a physical keyboard is recommended for Orbit.
 

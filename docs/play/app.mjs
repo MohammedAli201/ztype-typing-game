@@ -23,6 +23,10 @@ function tone(frequency, duration = .06) {
 }
 function updateProgress() {
   const selected = settings();
+  if (game.status === 'ready' || game.status === 'finished') {
+    $('overlay-copy').textContent = selected.mode === 'focus' ? 'One word at a time, without moving targets. Type at your own pace for one minute.' : 'Type a word’s first letter to lock on. Finish it before it reaches your ship.';
+    document.querySelector('.hint').textContent = selected.mode === 'focus' ? '60 seconds · still words · no lost shields' : '60 seconds · 5 shields · find your rhythm';
+  }
   const matching = history.filter(r => r.language === selected.language && r.mode === selected.mode && r.completed);
   $('best').textContent = matching.length ? Math.max(...matching.map(r => r.wpm)) : '—';
   $('best-caption').textContent = matching.length ? `${names[selected.language]} · ${selected.mode === 'focus' ? 'Focus' : 'Orbit'} · best of saved full-minute sessions` : 'Complete a full minute to set your best.';
@@ -65,7 +69,7 @@ function start() {
   game = new Game(settings()); nodes.forEach(node => node.remove()); nodes.clear();
   game.start(); lastFrame = performance.now();
   $('overlay').hidden = true; $('typing').disabled = false; $('typing').value = '';
-  $('typing').placeholder = 'Type the words above…'; $('pause').disabled = false; $('pause').textContent = 'Pause';
+  $('typing').placeholder = 'Type the words above…'; $('pause').disabled = false; $('pause').textContent = 'Pause'; $('restart').disabled = false;
   $('language').disabled = true; document.querySelectorAll('[name="mode"]').forEach(el => el.disabled = true);
   $('typing').focus(); announce(game.mode === 'focus' ? `Word: ${game.targets[0].word}` : 'Session started. Type a target word.'); render();
 }
@@ -81,7 +85,7 @@ function resume() {
   $('typing').disabled = false; $('typing').focus(); $('pause').textContent = 'Pause'; announceTarget();
 }
 function finish() {
-  $('typing').disabled = true; $('pause').disabled = true;
+  $('typing').disabled = true; $('pause').disabled = true; $('restart').disabled = true;
   $('language').disabled = false; document.querySelectorAll('[name="mode"]').forEach(el => el.disabled = false);
   const result = game.result();
   const saved = saveResult(storage, history, result); history = saved.rows;
@@ -109,6 +113,7 @@ function frame(now) {
   lastFrame = now; requestAnimationFrame(frame);
 }
 $('start').addEventListener('click', () => game.status === 'paused' ? resume() : start());
+$('restart').addEventListener('click', start);
 $('pause').addEventListener('click', () => game.status === 'paused' ? resume() : pause());
 $('typing').addEventListener('input', event => {
   if (event.isComposing) return;

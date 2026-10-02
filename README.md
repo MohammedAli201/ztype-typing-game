@@ -4,7 +4,7 @@
 
 A one-minute typing challenge with Orbit and Focus modes, English/Norwegian/code vocabulary, speed and accuracy results, optional sound, and progress saved on your device. Built with dependency-free JavaScript, HTML, and CSS.
 
-[Browser version and run instructions](docs/play/README.md) · [Game engine tests](docs/play/tests/engine.test.mjs)
+[Play ZType Lab](https://mohammedali201.github.io/ztype-typing-game/play/) · [Browser version and run instructions](docs/play/README.md) · [Game engine tests](docs/play/tests/engine.test.mjs)
 
 ```sh
 python3 -m http.server 8080 --directory docs/play
