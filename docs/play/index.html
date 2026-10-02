@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b111b">
+  <meta name="description" content="Build typing speed with a one-minute space challenge. Practice English, Norwegian, or coding words. No account needed.">
+  <title>ZType — Find your flow</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="./" aria-label="ZType home"><span class="brand-icon">↗</span> ZTYPE<span class="badge">LAB</span></a><span class="top-note">A LITTLE PRACTICE. A BETTER FLOW.</span><button id="sound" class="quiet" aria-pressed="false">Sound off</button></header>
+    <main>
+      <div class="intro"><div><p class="eyebrow"><span class="dot"></span> YOUR DAILY MOMENT OF FOCUS</p><h1>Find your <em>flow.</em></h1><p class="subtitle">Clear your mind. Clear the sky. Make every keystroke count.</p></div><div class="session-label"><strong>60</strong><span>SECONDS<br>JUST FOR YOU</span></div></div>
+      <div class="workspace">
+        <section class="game-panel" aria-label="Typing game">
+          <div class="stats"><div><span>TIME LEFT</span><strong id="time">60<span>s</span></strong></div><div><span>WORDS / MIN</span><strong id="wpm">0</strong></div><div><span>ACCURACY</span><strong id="accuracy">—</strong></div><div><span>SCORE</span><strong id="score">0</strong></div></div>
+          <div id="arena" class="arena">
+            <div class="arena-label"><span id="sector">SECTOR 01</span><span id="shields">5 SHIELDS</span></div>
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div id="targets" aria-hidden="true"></div>
+            <div id="overlay" class="overlay">
+              <div class="launch-icon" aria-hidden="true">⌁</div><p class="eyebrow">SMALL SESSIONS. REAL PROGRESS.</p><h2 id="overlay-title">Ready for takeoff?</h2><p id="overlay-copy">Type a word’s first letter to lock on.<br>Finish the word before it reaches your ship.</p><button id="start" class="primary">Start session <span aria-hidden="true">↗</span></button><span class="hint">60 seconds · 5 shields · your own pace</span>
+            </div>
+            <div class="ship" aria-hidden="true">▲</div><div class="boundary"></div>
+          </div>
+          <div class="input-row"><label class="sr-only" for="typing">Type target letters here</label><input id="typing" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Start a session to type…" disabled aria-describedby="typing-help"><button id="pause" class="quiet" disabled>Pause</button></div>
+          <div class="game-footer"><span id="typing-help">Wrong key? Keep going. Only the next correct letter counts.</span><span><kbd>Esc</kbd> pause</span></div>
+          <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+        </section>
+        <aside class="sidebar">
+          <section class="card setup"><p class="eyebrow">MAKE IT YOURS</p><h2>Your flight plan</h2><label for="language">Word collection</label><select id="language"><option value="english">English</option><option value="norwegian">Norsk · Norwegian</option><option value="coding">Code vocabulary</option></select><fieldset><legend>Practice style</legend><label class="mode"><input type="radio" name="mode" value="arcade" checked><span><strong>Orbit</strong><small>Moving words. A little adrenaline.</small></span><span aria-hidden="true">↗</span></label><label class="mode"><input type="radio" name="mode" value="focus"><span><strong>Focus</strong><small>One still word. No lost shields.</small></span><span aria-hidden="true">◎</span></label></fieldset><p class="settings-note">Settings apply to your next session.</p></section>
+          <section class="card progress"><div class="card-heading"><p class="eyebrow">PERSONAL BEST</p><span aria-hidden="true">✧</span></div><div class="best"><strong id="best">—</strong><span>WPM</span></div><p id="best-caption">Complete a full minute to set your best.</p><div class="progress-bottom"><span>Sessions played</span><strong id="sessions">0</strong></div></section>
+          <section class="tip"><span aria-hidden="true">✳</span><p><strong>Accuracy before speed.</strong><br>Relax your hands. Let your rhythm do the work.</p></section>
+        </aside>
+      </div>
+      <section class="history-section"><div class="history-heading"><div><p class="eyebrow">ONE SESSION AT A TIME</p><h2>Your recent flights</h2></div><button id="clear-history" class="quiet">Clear history</button></div><p id="empty-history">Your next personal best starts with your first session.</p><div class="table-wrap"><table id="history-table" hidden><caption class="sr-only">Last five typing sessions saved on this device</caption><thead><tr><th>Session</th><th>Collection / style</th><th>Speed</th><th>Accuracy</th><th>Score</th></tr></thead><tbody id="history"></tbody></table></div><p id="storage-note" class="privacy">Progress stays in this browser. No account, cookies, or tracking.</p></section>
+    </main>
+    <footer class="page-footer"><span>ZTYPE LAB <span class="muted">/ A typing experiment, reimagined.</span></span><a href="https://github.com/MohammedAli201/ztype-typing-game">Source &amp; original project credits ↗</a></footer>
+  </div>
+  <dialog id="results"><form method="dialog"><p class="eyebrow">SESSION COMPLETE</p><h2 id="result-title">Nice flying.</h2><p id="result-copy"></p><div class="result-grid"><div><strong id="result-wpm"></strong><span>WPM</span></div><div><strong id="result-accuracy"></strong><span>ACCURACY</span></div><div><strong id="result-cleared"></strong><span>WORDS CLEARED</span></div></div><p id="result-detail"></p><button class="primary" value="again">Fly again ↗</button><button class="quiet" value="close">Back to dashboard</button></form></dialog>
+  <dialog id="clear-dialog"><form method="dialog"><h2>Clear your progress?</h2><p>This removes the sessions saved in this browser.</p><button class="primary" value="cancel">Keep my progress</button><button class="quiet" value="clear">Clear history</button></form></dialog>
+  <noscript><p>This typing game needs JavaScript enabled.</p></noscript><script type="module" src="app.mjs"></script>
+</body>
+</html>

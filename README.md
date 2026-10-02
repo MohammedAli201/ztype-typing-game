@@ -1,5 +1,21 @@
 # ZType — Type to Shoot
 
+## New: ZType Lab browser MVP
+
+A one-minute typing challenge with Orbit and Focus modes, English/Norwegian/code vocabulary, speed and accuracy results, optional sound, and progress saved on your device. Built with dependency-free JavaScript, HTML, and CSS.
+
+[Browser version and run instructions](docs/play/README.md) · [Game engine tests](docs/play/tests/engine.test.mjs)
+
+```sh
+python3 -m http.server 8080 --directory docs/play
+# Open http://localhost:8080
+node --test docs/play/tests/*.test.mjs
+```
+
+This is an early playable product prototype. It preserves the original academic project below and uses newly created browser visuals and audio.
+
+## Original C++ project
+
 A C++ typing game developed as a University of Agder group project. Words move toward the player; typing their letters fires projectiles and clears targets. The implementation explores a game loop, state transitions, menus, levels, sound and a score display.
 
 **DAT220 · Software Development 2 · Group 7 · December 2019 · C++14 / SFML**
